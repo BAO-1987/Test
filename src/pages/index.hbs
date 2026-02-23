@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="en" class="page">
-{{> head title="Home"}}
+{{> head title="Focus Frame"}}
 
 <body class="page__body">
 
   <div class="site-container">
+
+    {{> header page="home"}}
 
     <main class="main">
       <section class="hero section">
@@ -20,14 +22,37 @@
               </p>
 
               <div class="hero__interaction">
-                <div class="hero__stidents">
-                  <img src="./images/students1.png" alt="image of students" width="54" height="54">
-                  <img src="./images/students2.png" alt="image of students" width="54" height="54">
-                  <img src="./images/students3.png" alt="image of students" width="54" height="54">
-                  <p>Our happy students </p>
+                <div class="hero__students">
+                  <ul>
+                    <li>
+                      <img src="./images/students1.png" alt="image of students" width="54" height="54">
+                    </li>
+
+                    <li>
+                      <img src="./images/students3.png" alt="image of students" width="54" height="54">
+                    </li>
+                    <li>
+                      <img src="./images/students2.png" alt="image of students" width="54" height="54">
+                    </li>
+
+                  </ul>
+
+                  <p>Our happy <br>
+                    students
+                    <img src="./icons/arrow.svg">
+                  </p>
                 </div>
                 <div class="hero__reviews">
+                  <img src="./icons/circle.svg">
+                  <div>
+                    <p>
+                      Reviews
+                    </p>
 
+                    <span>
+                      +1500
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -36,12 +61,15 @@
               <img src="./images/hero.png" alt="hero image" width="400" height="520">
             </div>
           </div>
+        </div>
       </section>
 
       <div class="marquee section">
-        <h2>
-          <span class="colored-text">Master</span> your photography skills <span colored-text>with us!</span>
-        </h2>
+        <div class="container">
+          <h2>
+            <span class="colored-text">Master</span> your photography skills <span class="colored-text">with us!</span>
+          </h2>
+        </div>
       </div>
 
       <section class="about section">
@@ -51,7 +79,7 @@
           </h2>
           <div class="about__inner">
             <div class="about__img">
-              <img src="./images/about.png" alt="hero image" width="400" height="520">
+              <img src="./images/about.png" alt=" image of camera" width="560" height="240">
             </div>
 
             <div class="about__descr">
@@ -77,45 +105,102 @@
 
         <div class="container">
           <div class="course__inner">
-            <h2>
-              Our <span class="colored-text">Courses</span>
+            <div class="course__descr">
+              <h2>
+                Our <span class="colored-text">Courses</span>
+              </h2>
               <p>
-                At our photography school, we offer a variety of courses that cover all aspects of this fascinating art.
+                At our photography school, we offer a variety of courses that cover all aspects of this fascinating
+                art.
                 Regardless of your experience or skill level, we have courses to suit your needs and goals.
               </p>
+            </div>
 
-              <ul class="course__list">
-                <li>
-                  <h3>
-                    Basics of photography
-                  </h3>
-                  <p>
-                    During this course, you will be able to familiarize yourself with different types of cameras, learn
-                    the basics of composition.
-                  </p>
-                </li>
+            <ul class="course__list">
+              <li class="course__item">
+                <h3>
+                  Basics of <br>photography
+                </h3>
+                <p>
+                  During this course, you will be able to familiarize yourself with different types of cameras, learn
+                  the basics of composition.
+                </p>
+              </li>
 
-                <li>
-                  <h3>
-                    Landscape photography
-                  </h3>
-                  <p>
-                    In this course, you'll learn how to choose the right angles, frame landscapes, and create depth and
-                    perspective in your images.
-                  </p>
-                </li>
+              <li class="course__item">
+                <h3>
+                  Landscape <br>photography
+                </h3>
+                <p>
+                  In this course, you'll learn how to choose the right angles, frame landscapes, and create depth and
+                  perspective in your images.
+                </p>
+              </li>
 
-                <li>
-                  <h3>
-                    Portrait photography
-                  </h3>
-                  <p>
-                    During this course, you will learn to choose the right lighting, reproduce the mood and expressions
-                    on the faces of the models.
-                  </p>
-                </li>
-              </ul>
+              <li class="course__item">
+                <h3>
+                  Portrait <br>
+                  photography
+                </h3>
+                <p>
+                  During this course, you will learn to choose the right lighting, reproduce the mood and expressions
+                  on the faces of the models.
+                </p>
+              </li>
+            </ul>
           </div>
+        </div>
+
+      </section>
+
+      <section class="mentors section">
+
+        <div class="container">
+          <h2>
+            Our <span class="colored-text">Mentors</span>
+          </h2>
+
+          <ul class="mentors__list">
+            <li class="mentors__item">
+              <img src="./images/mentors/emilia-smith.png" alt="image of emilia smith" width="180" height="180">
+              <h3>
+                Emilia Smith
+              </h3>
+              <p>
+                1.5 years of experience
+              </p>
+            </li>
+
+            <li class="mentors__item">
+              <img src="./images/mentors/alex-lebedev.png" alt="image of alex lebedev" width="180" height="180">
+              <h3>
+                Alex Lebedev
+              </h3>
+              <p>
+                3.5 years of experience
+              </p>
+            </li>
+
+            <li class="mentors__item">
+              <img src="./images/mentors/mia-dubrovska.png" alt="image of mia dubrovska" width="180" height="180">
+              <h3>
+                Mia Dubrovska
+              </h3>
+              <p>
+                2.0 years of experience
+              </p>
+            </li>
+
+            <li class="mentors__item">
+              <img src="./images/mentors/eliot-kovalev.png" alt="image of eliot kovalev" width="180" height="180">
+              <h3>
+                Eliot Kovalev
+              </h3>
+              <p>
+                4.0 years of experience
+              </p>
+            </li>
+          </ul>
         </div>
 
       </section>
@@ -123,10 +208,43 @@
       <section class="sign section">
         <div class="container">
           <div class="sign__inner">
-            <div class="sign__contetnt">
+            <div class="sign__content">
               <h2>
-                Sign Up
+                Sign <span class="colored-text">Up</span>
               </h2>
+
+              <p>
+                Please use the form below to contact us. Enter your name, email, and message and we'll get back to you
+                shortly.
+              </p>
+
+              <form class="sign__form">
+                <label><input type="text" class="sign__input" placeholder="Enter your name" required></label>
+
+                <label><input type="email" class="sign__input" placeholder="Enter your email" required></label>
+
+                <label><textarea class="sign__input sign__input--textarea " placeholder="Message" rows="5"
+                    required></textarea></label>
+
+
+                <button class="btn" type="submit">SEND</button>
+                <p class="sign__policy">
+                  By clicking on "Send" button, you agree to our <a href="#" class="sign__link">Privacy Policy</a>, and
+                  allow Promodo to use this information for marketing purposes.
+                </p>
+              </form>
+            </div>
+
+            <div class="sign__images">
+
+              <div class="sign__img sign__img--small">
+                <img src="./images/small-camera.png" alt="image of small camera" width="155" height="165">
+              </div>
+
+              <div class="sign__img ">
+                <img src="./images/big-camera.png" alt="image of big camera" width="255" height="315">
+              </div>
+
             </div>
           </div>
 
@@ -134,8 +252,71 @@
 
       </section>
 
+      <section class="reviews section">
+        <div class="container">
+          <h2>
+            Reviews
+          </h2>
+
+          <ul class="reviews__list">
+            <li class="reviews__item">
+
+              <div class="reviews__content">
+                <div class="reviews__avatar">
+                  <img src="./images/abraham-baker.png" alt="Abraham Baker" width="56" height="56">
+                  <div>
+                    <h3 class="reviews__name">Abraham Baker</h3>
+                    <p class="reviews__role">Student</p>
+                  </div>
+                </div>
+
+                <div class="reviews__stars">
+                  <img src="./images/stars.png" alt="rating 4.5 stars" class="reviews__stars">
+                </div>
+
+
+              </div>
+
+              <p class="reviews__text">
+                I am very pleased that I decided to enroll in photography school. The teachers turned out to be very
+                talented and experienced professionals who share their knowledge and are dedicated to their work. I was
+                able to expand my skills and discover my own style.
+              </p>
+            </li>
+
+            <li class="reviews__item">
+
+              <div class="reviews__content">
+                <div class="reviews__avatar">
+                  <img src="./images/amanda-lowery.png" alt="Amanda Lowery" width="56" height="56">
+                  <div>
+                    <h3 class="reviews__name">Amanda Lowery</h3>
+                    <p class="reviews__role">Student</p>
+                  </div>
+                </div>
+
+
+
+                <div class="reviews__stars">
+                  <img src="./images/stars.png" alt="rating 4.5 stars" class="reviews__stars">
+                </div>
+
+              </div>
+
+              <p class="reviews__text">
+                The courses at the photography school exceeded all my expectations. I gained not only technical
+                knowledge, but also inspiration and motivation to reach new heights in my creativity. Hands-on classes
+                and workshops helped me understand different styles of photography.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
 
     </main>
+
+    {{> footer}}
 
   </div>
 

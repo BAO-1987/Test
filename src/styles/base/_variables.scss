@@ -6,7 +6,7 @@
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // font-family
-  --font-family: "Raleway", sans-serif;
+  --font-family: "Dm Sans", sans-serif;
 
   // font-weight
   --fw-500: 500;
@@ -14,10 +14,11 @@
   --fw-900: 900;
 
   // color
-  --color-dark: #121212;
+  --color-black: #121212;
   --color-blue-400: #283642;
+  --color-white: #fff;
   --color-brown-400: #bea69e;
-  --color-gray-900:  #1d1d1d;
+  --color-gray-900: #1d1d1d;
 
   //  radius
   --radius-main: 12px;

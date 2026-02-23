@@ -1,84 +1,106 @@
-@use "../../utils/functions" as *;
-@use "../../utils/mixins" as *;
-
 .hero {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: -7rem;
-  margin-bottom: 20px;
-  height: var(--vh);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/images/hero-bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
 
   &__inner {
-    @include flex-sb;
-
-    position: relative;
-    z-index: 1;
-    padding-top: 5rem;
-    height: calc(var(--vh, 1vh) * 1);
-    min-height: 450px;
+    display: flex;
     align-items: center;
-    gap: 25px;
+    justify-content: space-between;
+    background-color: var(--color-gray-900);
+    padding: 80px 50px 50px;
+    overflow: hidden;
+    border-radius: 30px;
+    z-index: 1;
   }
 
   &__content {
-    margin-right: auto;
-    width: 100%;
-    max-width: 904px;
-  }
-
-  .btn {
-    max-width: 314px;
-  }
-
-  h1 {
-    margin-bottom: 5.2rem;
-  }
-
-  .lang {
-    translate: 0 -18px;
-  }
-
-  .social {
-    align-items: baseline;
+    display: flex;
     flex-direction: column;
-    margin-right: 4.16rem;
-  }
-
-  @include media(tablet) {
-    height: 100lvh;
+    max-width: 565px;
+    width: 100%;
+    height: 100%;
 
     h1 {
-      margin-bottom: 50px;
-    }
+      margin-block-end: 20px;
 
-    .social {
-      margin-right: 15px;
+      span {
+        font-style: italic;
+        font-weight: 400;
+      }
+
+      + p {
+        max-width: 420px;
+        width: 100%;
+        margin-block-end: 20px;
+        font-size: 14px;
+        line-height: 1.3;
+        letter-spacing: -0.02em;
+      }
     }
   }
 
-  @include media(mobile-l) {
-    &__inner {
-      flex-direction: column-reverse;
+  &__interaction {
+    display: flex;
+    align-items: center;
+    max-width: 390px;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+
+  &__students {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    ul {
+      display: flex;
+      align-items: center;
       justify-content: center;
-    }
 
-    .social {
-      flex-direction: row;
-      margin: 0 auto;
-    }
+      li {
+        overflow: hidden;
+        border-radius: 50%;
+        border: 3px solid var(--color-gray-900);
+        outline-offset: -3px;
+      }
 
-    .lang {
-      flex-direction: row;
-      align-self: flex-start;
-      translate: none;
+      li:first-of-type {
+        translate: 10px 0;
+      }
+
+      li:last-of-type {
+        translate: -10px 0;
+      }
     }
   }
 
-  @include media(mobile-m) {
-    .btn {
-      max-width: 100%;
+  &__reviews {
+    display: flex;
+    gap: 12px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
+
+    p {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &__image {
+    translate: 0 50px;
   }
 }

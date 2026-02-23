@@ -15,8 +15,9 @@ body {
   font-style: normal;
   font-size: 16px;
   line-height: 1.25;
+  letter-spacing: -0.02em;
   color: var(--color-white);
-  background-color: var(--color-gray-900);
+  background-color: var(--color-black);
   font-optical-sizing: auto;
   color-scheme: dark light;
 
@@ -69,13 +70,17 @@ body {
 .logo {
   display: block;
   width: 100%;
-  max-width: 181px;
+  max-width: 125px;
 
   img {
     width: 100%;
   }
 }
 
-section {
-  margin-bottom: 3rem;
+.section {
+  margin-bottom: 150px;
+}
+
+.colored-text {
+  color: var(--color-brown-400);
 }

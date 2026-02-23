@@ -1,2 +1,8 @@
+@import "./_about.scss";
+@import "./_course.scss";
 @import "./_hero.scss";
 @import "./_index.scss";
+@import "./_marquee.scss";
+@import "./_mentors.scss";
+@import "./_reviews.scss";
+@import "./_sign.scss";

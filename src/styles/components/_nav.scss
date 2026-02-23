@@ -3,10 +3,11 @@
 
 .nav {
   @include flex-all-sb;
-
-  position: relative;
+  gap: 20px;
 
   &__inner {
+    @include flex-all-sb;
+    width: 100%;
     padding: 22px 50px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: var(--radius-main);
@@ -14,9 +15,8 @@
 
   &__list {
     @include flex-all-center;
-    width: 100%;
-
-    margin: 0 auto;
+  
+    margin-inline-start: auto;
 
     li {
       &:not(:last-child) {
@@ -28,7 +28,6 @@
       font-size: 14px;
       text-transform: uppercase;
       transition: color 0.5s linear;
-
 
       &:hover {
         color: var(--color-brown-400);

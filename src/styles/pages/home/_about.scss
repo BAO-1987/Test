@@ -1,0 +1,28 @@
+.about {
+  h2 {
+    margin-block-end: 50px;
+  }
+
+  &__inner {
+    display: flex;
+    gap: 50px;
+  }
+
+  &__descr {
+    display: flex;
+    gap: 40px;
+    max-width: 630px;
+    width: 100%;
+
+    p {
+      width: 100%;
+      &:first-of-type {
+        max-width: 330px;
+      }
+
+      &:last-of-type {
+        max-width: 275px;
+      }
+    }
+  }
+}

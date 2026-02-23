@@ -6,16 +6,17 @@ h2,
 h3 {
   overflow: hidden;
   width: fit-content;
-  letter-spacing: 0.03em;
+  letter-spacing: -0.02em;
 }
 
 h1 {
-  font-weight: var(--fw-900);
-  font-size: clamp(45px, 0.6408rem + 7.2785vw, 150px);
-  line-height: 1.17;
-  letter-spacing: 0.04em;
+  font-weight: 500;
+  font-size: clamp(35px, 1.446rem + 3.2955vw, 64px);
+  line-height: 1;
+  letter-spacing: -0.04em;
 }
 
-
-
-
+h2 {
+  font-size: clamp(35px, 1.8551rem + 1.4773vw, 48px);
+  line-height: 1.1;
+}
