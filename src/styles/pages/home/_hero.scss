@@ -1,0 +1,84 @@
+@use "../../utils/functions" as *;
+@use "../../utils/mixins" as *;
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -7rem;
+  margin-bottom: 20px;
+  height: var(--vh);
+
+  &__inner {
+    @include flex-sb;
+
+    position: relative;
+    z-index: 1;
+    padding-top: 5rem;
+    height: calc(var(--vh, 1vh) * 1);
+    min-height: 450px;
+    align-items: center;
+    gap: 25px;
+  }
+
+  &__content {
+    margin-right: auto;
+    width: 100%;
+    max-width: 904px;
+  }
+
+  .btn {
+    max-width: 314px;
+  }
+
+  h1 {
+    margin-bottom: 5.2rem;
+  }
+
+  .lang {
+    translate: 0 -18px;
+  }
+
+  .social {
+    align-items: baseline;
+    flex-direction: column;
+    margin-right: 4.16rem;
+  }
+
+  @include media(tablet) {
+    height: 100lvh;
+
+    h1 {
+      margin-bottom: 50px;
+    }
+
+    .social {
+      margin-right: 15px;
+    }
+  }
+
+  @include media(mobile-l) {
+    &__inner {
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
+
+    .social {
+      flex-direction: row;
+      margin: 0 auto;
+    }
+
+    .lang {
+      flex-direction: row;
+      align-self: flex-start;
+      translate: none;
+    }
+  }
+
+  @include media(mobile-m) {
+    .btn {
+      max-width: 100%;
+    }
+  }
+}

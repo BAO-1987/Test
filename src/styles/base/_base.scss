@@ -1,0 +1,81 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins" as *;
+
+html,
+body {
+  scroll-behavior: smooth;
+  overscroll-behavior-y: none;
+}
+
+.page {
+  height: var(--vh);
+  height: 100dvh;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--color-white);
+  background-color: var(--color-gray-900);
+  font-optical-sizing: auto;
+  color-scheme: dark light;
+
+  &__body {
+    position: relative;
+    min-width: 320px;
+    min-height: var(--vh);
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      background-color: rgba(39, 40, 43, 0.75);
+      opacity: 0;
+      transition: opacity 0.3s;
+      inset: 0;
+    }
+  }
+
+  &.open {
+    overflow: hidden;
+
+    > .page__body::before {
+      z-index: 5;
+      opacity: 1;
+      height: calc(var(--vh, 1vh) * 100);
+    }
+  }
+}
+
+.container {
+  margin-inline: auto;
+  padding: 0 var(--container-offset);
+  width: 100%;
+  max-width: var(--container-width);
+}
+
+.site-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr auto;
+  overflow-x: hidden;
+  min-height: var(--vh);
+}
+
+.main {
+  padding-top: var(--header-height);
+}
+
+.logo {
+  display: block;
+  width: 100%;
+  max-width: 181px;
+
+  img {
+    width: 100%;
+  }
+}
+
+section {
+  margin-bottom: 3rem;
+}

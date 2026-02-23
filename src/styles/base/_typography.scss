@@ -1,0 +1,21 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+h1,
+h2,
+h3 {
+  overflow: hidden;
+  width: fit-content;
+  letter-spacing: 0.03em;
+}
+
+h1 {
+  font-weight: var(--fw-900);
+  font-size: clamp(45px, 0.6408rem + 7.2785vw, 150px);
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+}
+
+
+
+

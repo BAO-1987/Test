@@ -1,0 +1,22 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 100%;
+  background-color: var(--color-dark-900);
+  transition-property: transform, padding;
+  transition-duration: 0.15s;
+
+  &.hide {
+    transform: translateY(-110%) !important;
+  }
+
+ 
+}

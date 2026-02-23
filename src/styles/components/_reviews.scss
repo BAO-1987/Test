@@ -1,0 +1,149 @@
+@use "../utils/functions" as *;
+@use "../utils/mixins" as *;
+
+.reviews {
+  $root: &;
+
+  &__inner {
+    @include flex-sb;
+
+    align-items: flex-end;
+    margin-bottom: 4.2rem;
+
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+
+  &__nav {
+    @include flex;
+
+    gap: 30px;
+  }
+
+  &__slider {
+    overflow: hidden;
+  }
+
+  &__list {
+    margin-bottom: 50px;
+  }
+
+  &__item {
+    @include flex-all-sb;
+
+    height: auto;
+    gap: 16px;
+  }
+
+  &__blockqoute {
+    @include flex-col;
+
+    position: relative;
+    padding-top: 4.16rem;
+    width: 100%;
+    height: 100%;
+    max-width: 928px;
+
+    &::before {
+      @include cover-background;
+
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 32px;
+      height: 22px;
+      background-image: url("../images/icons/quotes.svg");
+    }
+
+    p {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__image {
+    translate: 0 -16px;
+  }
+
+  &__content {
+    @include flex;
+
+    margin-top: auto;
+    gap: 50px;
+  }
+
+  &__author {
+    font-weight: var(--fw-700);
+    font-size: clamp(16px, calc(00.9583rem + 0.1852vi), 18px);
+  }
+
+  &__links {
+    @include flex-v-center;
+
+    gap: 50px;
+  }
+
+  &--main {
+    #{$root}__list {
+      @include flex-col;
+      margin-bottom: 0;
+      gap: rem(100);
+    }
+  }
+
+  .btn {
+    max-width: 275px;
+  }
+
+  @include media(tablet) {
+    &__item {
+      flex-direction: column-reverse;
+    }
+
+    &__blockqoute {
+      padding-top: 30px;
+    }
+
+    &__image {
+      translate: none;
+    }
+
+    &--main {
+      #{$root}__list {
+        gap: 50px;
+      }
+    }
+  }
+
+  @include media(mobile-l) {
+
+    &__list {
+      margin-bottom: 25px;
+    }
+
+    &__content {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    &__inner {
+      margin-bottom: 35px;
+    }
+
+    img {
+      aspect-ratio: 24/9;
+      object-position: center;
+    }
+  }
+
+  @include media(mobile-m) {
+    &__links {
+      flex-direction: column;
+      gap: 30px;
+    }
+    .btn {
+      max-width: 100%;
+    }
+  }
+}

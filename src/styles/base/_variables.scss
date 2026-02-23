@@ -1,0 +1,26 @@
+@import url("https://https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&&display=swap");
+
+:root {
+  --content-width: 1240px;
+  --container-offset: 16px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // font-family
+  --font-family: "Raleway", sans-serif;
+
+  // font-weight
+  --fw-500: 500;
+  --fw-700: 700;
+  --fw-900: 900;
+
+  // color
+  --color-dark: #121212;
+  --color-blue-400: #283642;
+  --color-brown-400: #bea69e;
+  --color-gray-900:  #1d1d1d;
+
+  //  radius
+  --radius-main: 12px;
+  --radius-big: 15px;
+  --radius-round: 50%;
+}
