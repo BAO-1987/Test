@@ -28,7 +28,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-block-end: 20px;
+    margin-block-end: 8px;
 
     img {
       border-radius: 50%;
@@ -50,12 +50,5 @@
     font-size: 14px;
     line-height: 1.3;
     margin-block-end: 16px;
-  }
-
-
-  &__text {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 14px;
-    line-height: 1.5;
   }
 }

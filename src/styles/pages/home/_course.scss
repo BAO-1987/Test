@@ -7,7 +7,7 @@
     margin-block-end: 50px;
 
     p {
-      max-width: 585px;
+      max-width: 565px;
       width: 100%;
     }
   }
@@ -33,7 +33,7 @@
 
     &::before {
       content: counter(step, decimal-leading-zero);
-      margin-block-end: 35px;
+      margin-block-end: 45px;
       font-size: 14px;
       position: relative;
       opacity: 0.5;
@@ -54,6 +54,8 @@
     h3 {
       margin-block-end: 15px;
       font-size: 28px;
+      line-height: 1.1;
+      letter-spacing: 0;
     }
 
     p {
