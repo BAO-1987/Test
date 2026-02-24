@@ -1,78 +1,79 @@
-@use "../utils/functions/" as *;
-@use "../utils/mixins" as *;
+@use '../utils/functions/' as *;
+@use '../utils/mixins' as *;
 
-html,
-body {
+html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 20px);
+}
+
+body {
   overscroll-behavior-y: none;
 }
 
 .page {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  color-scheme: dark light;
+  font-family: var(--font-family);
+  font-optical-sizing: auto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
   height: var(--vh);
   height: 100dvh;
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 1.25;
   letter-spacing: -0.02em;
-  color: var(--color-white);
-  background-color: var(--color-black);
-  font-optical-sizing: auto;
-  color-scheme: dark light;
+  line-height: 1.25;
 
   &__body {
-    position: relative;
-    min-width: 320px;
     min-height: var(--vh);
+    min-width: 320px;
+    position: relative;
 
     &::before {
-      content: "";
-      position: absolute;
-      z-index: -1;
       background-color: rgba(39, 40, 43, 0.75);
-      opacity: 0;
-      transition: opacity 0.3s;
+      content: '';
       inset: 0;
+      opacity: 0;
+      position: absolute;
+      transition: opacity 0.3s;
+      z-index: -1;
     }
-
   }
 
   &.open {
     overflow: hidden;
 
     > .page__body::before {
-      z-index: 5;
-      opacity: 1;
       height: calc(var(--vh, 1vh) * 100);
+      opacity: 1;
+      z-index: 5;
     }
   }
 }
 
 .container {
   margin-inline: auto;
+  max-width: var(--container-width);
   padding: 0 var(--container-offset);
   width: 100%;
-  max-width: var(--container-width);
 }
 
 .site-container {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 1fr auto;
-  overflow-x: hidden;
   min-height: var(--vh);
+  overflow-x: hidden;
 }
 
-
-.main {
-  padding-top: calc(var(--header-height) - 20px);
-}
+// .main {
+//   padding-top: calc(var(--header-height) - 20px);
+// }
 
 .logo {
   display: block;
-  width: 100%;
   max-width: 125px;
+  width: 100%;
 
   img {
     width: 100%;
@@ -81,6 +82,7 @@ body {
 
 .section {
   margin-bottom: 150px;
+  scroll-margin-top: var(--header-height);
 }
 
 .colored-text {

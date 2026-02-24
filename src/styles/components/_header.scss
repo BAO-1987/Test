@@ -10,7 +10,7 @@
   margin: 0 auto;
   padding: 20px 0;
   width: 100%;
-  background-color: var(--color-dark-900);
+  background-color: var(--color-black);
   transition-property: transform, padding;
   transition-duration: 0.15s;
 
@@ -18,5 +18,4 @@
     transform: translateY(-110%) !important;
   }
 
- 
 }

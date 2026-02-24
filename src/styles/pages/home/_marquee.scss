@@ -1,22 +1,23 @@
 .marquee {
-  padding: 24px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 24px 0;
 
   h2 {
+    animation: marquee 25s linear infinite;
     font-size: clamp(35px, 1.5739rem + 2.7273vw, 59px);
     line-height: 1;
     text-transform: uppercase;
     white-space: nowrap;
-    // animation: marquee 15s linear infinite;
   }
 
-  // @keyframes marquee {
-  //   0% {
-  //     transform: translateX(100%);
-  //   }
-  //   100% {
-  //     transform: translateX(-100%);
-  //   }
-  // }
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
 }

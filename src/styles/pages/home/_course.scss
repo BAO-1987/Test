@@ -1,9 +1,9 @@
 .course {
   &__descr {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    display: flex;
     gap: 20px;
+    justify-content: space-between;
     margin-block-end: 50px;
 
     p {
@@ -20,42 +20,42 @@
   }
 
   &__item {
-    position: relative;
+    background: linear-gradient(180deg, #060707 0%, #1d1d1d 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-main);
     counter-increment: step;
     display: flex;
     flex-direction: column;
-    border-radius: var(--radius-main);
+    min-height: 452px;
     overflow: hidden;
     padding: 32px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: linear-gradient(180deg, #060707 0%, #1d1d1d 100%);
-    min-height: 452px;
+    position: relative;
 
     &::before {
       content: counter(step, decimal-leading-zero);
-      margin-block-end: 45px;
       font-size: 14px;
-      position: relative;
+      margin-block-end: 45px;
       opacity: 0.5;
+      position: relative;
     }
 
     &::after {
       content: '';
       position: absolute;
+      right: 32px;
       width: 32px;
       height: 32px;
       background-image: url("/icons/arrow-circle.svg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-   right: 32px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
 
     h3 {
-      margin-block-end: 15px;
       font-size: 28px;
-      line-height: 1.1;
       letter-spacing: 0;
+      line-height: 1.1;
+      margin-block-end: 15px;
     }
 
     p {

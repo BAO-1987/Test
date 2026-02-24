@@ -1,26 +1,25 @@
 /* stylelint-disable declaration-no-important */
-@use "../utils/functions/" as *;
-@use "../utils/mixins" as *;
+@use '../utils/functions/' as *;
+@use '../utils/mixins' as *;
 
 *[class].btn {
   @include flex-all-center;
-  border-radius: var(--radius-main);
-  padding: 16px 84px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.56;
-  text-transform: uppercase;
-  white-space: nowrap;
-  color: var(--color-black);
   background-color: var(--color-white);
-  transition-property: color, background-color;
+  border-radius: var(--radius-main);
+  color: var(--color-black);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.56;
+  padding: 16px 84px;
+  text-transform: uppercase;
   transition-duration: 0.3s;
+  transition-property: color, background-color;
   transition-timing-function: linear;
+  white-space: nowrap;
 
   &:hover,
   &:focus {
-    color: var(--color-brown-400);
     background-color: var(--color-gray-900);
+    color: var(--color-brown-400);
   }
-
 }
